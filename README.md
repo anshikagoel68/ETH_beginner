@@ -57,7 +57,7 @@ To deploy this contract and to know the result, we need to follow the following 
 1.  we ned to give user-defined values to tokenName,tokenAbbrv,totalSupply respectively.
 2. copy the address from ACCOUNT column
 3. Go to the deployed contract section click on it 
-4. click on mint function block -> paste that address in address column -> assign the some value  to value block -> click on transict
+4. click on mint function block -> paste that address in address column -> assign the some value  to value block -> click on transact
 (to know the value of new tokens through totalSupply)
 5. click on totalSupply
 6. Follow the step 4 and 5 for burn function. (that eventually helps us to know the value  burned token through totalSupply).
