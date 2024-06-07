@@ -10,20 +10,20 @@ contract Token {
     mapping(address => uint) public balances;
 
     constructor(string memory name, string memory abbrv, uint initialSupply) {
-        tokenName = name;
-        tokenAbbrv = abbrv;
-        totalSupply = initialSupply;
+        tokenName=name;
+        tokenAbbrv=abbrv;
+        totalSupply=initialSupply;
     }
 
     function mint(address add, uint value) public {
-        totalSupply += value;
+        totalSupply+=value;
         balances[add] += value;
     }
 
     function burn(address add, uint value) public {
-        if (balances[add] >= value) {
-            totalSupply -= value;
-            balances[add] -= value;
+        if (balances[add]>=value) {
+            totalSupply-=value;
+            balances[add]-=value;
         }
     }
 }
