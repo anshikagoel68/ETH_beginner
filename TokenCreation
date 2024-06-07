@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract Token {
+    string public tokenName;
+    string public tokenAbbrv;
+    uint public totalSupply;
+
+mapping(address => uint) public balances;
+constructor(string memory name, string memory abbrv, uint initialSupply){
+        tokenName=name;
+        tokenAbbrv=abbrv;
+        totalSupply=initialSupply;
+}
+function mint(address add, uint value) public{
+        totalSupply+=value;
+        balances[add]+=value;
+}
+function burn(address add, uint value)public{
+        if(balances[add]>=value){
+            totalSupply-=value;
+            balances[add]-=value;
+            }
+        }
+}
